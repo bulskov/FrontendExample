@@ -8,7 +8,16 @@
 <h1>Example</h1>
 
 <input data-bind="textInput: firstName"/>
-<div data-bind="text: firstName"></div>
+<input data-bind="textInput: lastName" />
+<div data-bind="text: fullName"></div>
+<button data-bind="click: clickButton">Click Me</button>
+
+<ul data-bind="foreach: names">
+    <li>
+        <span data-bind="text: name"></span>
+        <button data-bind="click: $parent.deleteName">Del</button>
+    </li>
+</ul>
 
 
 <script data-main="js/main.js" src="js/lib/require.js/require.js"></script>
