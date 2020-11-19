@@ -1,5 +1,5 @@
-﻿define([], function() {
+﻿define(['knockout'], function(ko) {
     return {
-        name: "Peter"
+        firstName: ko.observable("Peter")
     };
 });
